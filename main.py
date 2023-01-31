@@ -1,7 +1,6 @@
 import winHandler
 import winMacro
 import auxFiles
-import time
 
 if __name__ == "__main__":
     windowName = 'NoMachine - ConexaoUFF'    

@@ -5,9 +5,6 @@ import pygetwindow
 import pyautogui
 import time
 
-import win32api
-import win32con
-
 class myMouse():
     def __init__(self):
         # Mouse click position
@@ -135,7 +132,7 @@ class GocadApplicationMacro(ApplicationMacro):
 
             # Erase main script text box
             self.eraseMainScript()
-            
+
             progress_counter += 1
 
 
