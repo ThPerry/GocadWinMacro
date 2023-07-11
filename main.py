@@ -16,23 +16,16 @@ if __name__ == "__main__":
     removeCode = auxFiles.CodeFile('gocad_Code.c')
     addCodeTxt = addCode.getCodeText()
     removeCodeTxt = removeCode.getCodeText()
-    
-    #cellsFile = auxFiles.CellsFile('AddRemoveCells.txt')
-    #addPositions = cellsFile.getAddCells()
-    #removePositions = cellsFile.getRemoveCells()
+
 
     cellsFile = auxFiles.CellsFile('AddRemoveCells.txt')
-    edgePositions = cellsFile.getAddCells()
-    addPositions = []
-
-    for pos in edgePositions:
-        for j in range(pos[1] + 1, 123 + 1):
-            addPositions.append([pos[0], j, pos[2]])
+    addPositions = cellsFile.getAddCells()
+    
+    #addPositions = []
+    #for pos in edgePositions:
+    #    for i in range(pos[0], 125 + 1):
+    #        addPositions.append([i, pos[1], pos[2]])
 
     ## Execute script
     GocadMacroHandler.executeScriptOnListedCells(addPositions, addCodeTxt)
-
-
-
-
-    
+        
